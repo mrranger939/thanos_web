@@ -1,0 +1,335 @@
+/* .navg{
+    margin-right: -21rem;
+} */
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --main-bg: #000000;
+    --main-color: #FFD700;
+}
+/* body{
+  height: 100vh;
+    display: flex;
+    flex-direction: column;
+} */
+html{
+    font-size: 62.5%;
+}
+p{
+    font-size: 1.4rem;
+}
+.row{
+    margin: 0;
+
+}
+.main_menu{
+    background-color: var(--main-bg);
+
+}
+.navbar{
+    color: aliceblue;
+    background-color: var(--main-bg);
+    padding: 2rem 0;
+}
+.navbar li {
+    margin-left: 20px;
+}
+
+.navbar a{
+    color: #fff;
+    font-size: 1.8rem;
+}
+.nav_logo{
+    font-family: "Julius Sans One";
+    font-weight: bolder;
+    color: #FFD700;
+    font-size: 2.4rem;
+}
+.navbar a:hover{
+    color: var(--main-color);
+}
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(0,151,230)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+  
+.custom-toggler {
+    border: 1px solid rgb(0,151,230);
+} 
+.nav_img{
+    width: 5%;
+    height: 5%;
+}
+.bo{
+    font-size: 1.5rem;
+    color: white;
+}
+
+.one{
+    display: flex;
+    
+}
+/* .boimg{
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+    height: 71vh;
+    width: auto;
+
+    object-fit: cover;
+} */
+.boimg {
+    max-width: 100%; /* Ensures the image does not exceed the width of its parent */
+    max-height: 100%; /* Ensures the image does not exceed the height of its parent */
+    height: auto; /* Allows the image to maintain its aspect ratio */
+    display: block; /* Ensures proper block-level rendering of the image */
+    margin: 0 auto; /* Centers the image horizontally within its parent div */
+    margin-bottom: 2rem;
+    border-radius: 30px;
+  }
+
+/* #footer{
+    padding: 7% 15%;
+    text-align: center;
+} */
+/* intro for home */
+.main_intro{
+    background-color: #000000;
+
+}
+.btn{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+}
+.intro_img{
+    object-fit: cover;
+    max-width: 100%;
+    /* width: 76%; */
+    height: auto;
+}
+
+h1{
+    font-family: "Montserrat-black";
+    font-size: 3rem;
+    line-height: 1.5;
+    font-weight: bold;
+    color: #fff;
+}
+h2{
+    font-family: "Montserrat-Bold";
+    font-size: 3rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    color: #fff;
+}
+/* intro ends */
+/* the infinity stones*/
+#features{
+    padding: 7% 15%;
+    background-color: white;
+    position: relative;
+    z-index: 1;
+    
+}
+.feature-box{
+    text-align: center;
+    padding: 5%;
+}
+
+@keyframes glowspace {
+    0% {
+    filter:drop-shadow(0 0 5px #00f);
+      /* box-shadow: 0 0 10px #00f;  */
+    }
+    100% {
+        filter:drop-shadow(0 0 25px #00f);
+     /*  box-shadow: 0 0 20px #00f;  */
+    }
+  }
+.space{
+    
+    color: blue;
+    filter:drop-shadow(0 0 10px #00f);
+    animation: glowspace 1.5s infinite alternate;
+}
+@keyframes glowtime {
+    0% {
+        filter: drop-shadow(0 0 5px #0f0);
+    }
+    100% {
+        filter: drop-shadow(0 0 25px #0f0);
+    }
+}
+
+.time {
+    color: green;
+    filter: drop-shadow(0 0 10px #0f0);
+    animation: glowtime 1.5s infinite alternate;
+}
+@keyframes glowreality {
+    0% {
+        filter: drop-shadow(0 0 5px #f00);
+    }
+    100% {
+        filter: drop-shadow(0 0 25px #f00);
+    }
+}
+
+.reality {
+    color: red;
+    filter: drop-shadow(0 0 10px #f00);
+    animation: glowreality 1.5s infinite alternate;
+}
+@keyframes glowmind {
+    0% {
+        filter: drop-shadow(0 0 5px #ff0);
+    }
+    100% {
+        filter: drop-shadow(0 0 25px #ff0);
+    }
+}
+
+.mind {
+    color: yellow;
+    filter: drop-shadow(0 0 10px #ff0);
+    animation: glowmind 1.5s infinite alternate;
+}
+@keyframes glowpower {
+    0% {
+        filter: drop-shadow(0 0 5px #800080);
+    }
+    100% {
+        filter: drop-shadow(0 0 25px #800080);
+    }
+}
+
+.power {
+    color: purple;
+    filter: drop-shadow(0 0 10px #800080);
+    animation: glowpower 1.5s infinite alternate;
+}
+@keyframes glowsoul {
+    0% {
+        filter: drop-shadow(0 0 5px #ffa500);
+    }
+    100% {
+        filter: drop-shadow(0 0 25px #ffa500);
+    }
+}
+
+.soul {
+    color: orange;
+    filter: drop-shadow(0 0 10px #ffa500);
+    animation: glowsoul 1.5s infinite alternate;
+}
+
+/* .space:hover{
+    box-shadow: 2px 7px 44px rgba(3, 32, 252, 67);
+} */
+/* the infinity stones*/
+/* the black-order corusel */
+.bocr{
+    margin-bottom: 2rem;
+
+} 
+.bocr p{
+    color: white;
+}
+.carousel-item{
+    padding: 7% 15%;
+    background: linear-gradient(to bottom, #1a1a1a, #000033, #000066);
+}
+.bocr-img{
+    margin-top: 2rem;
+}
+.bocr-img img{
+    max-width: min-content;
+}
+.ic{
+    border-radius: 75px;
+    height: 40rem;
+}
+.bocr-plabel{
+    height: 45rem;
+}
+/* the black-order corusel */
+/* eraser */
+#myPieChart{
+    width: 20px;
+    height: 20px;
+}
+.form-control{
+    font-size: 1.5rem;
+}
+.er{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+.checkerase{
+    font-size: 1.5rem;
+    margin: 4rem 0 4rem 0;
+}
+/* eraser */
+/* the pricing section starts */
+.pricing_cont{
+    margin: 5rem 0rem 5rem 0;
+    font-size: 2rem;
+}
+.card{
+    border: 1.5px solid black;
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.3);
+}
+/* the pricing section ends */
+/* undercons */
+.undercons{
+    color: black;
+    text-align: center;
+    align-items: center;
+    margin: 10rem 0 10rem 0;
+}
+.undercons h1{
+    color: #000000;
+}
+.undercons img{
+    height: 200%;
+}
+/* undercons */
+
+footer{
+    text-align: center;
+    width: 100%;
+    background-color: var(--main-bg);
+    margin-top: auto;
+    margin-bottom: 0;
+
+}
+footer p{
+    margin: 0;
+    text-align: center;
+    color: #fff;
+    line-height: 5rem;
+    font-size: 1.4rem;
+}
+.icns{
+    color: #fff;
+    margin: 2rem 2rem 0 2rem;
+}
+/* bo pages */
+.pj{
+    justify-content: left;
+    align-items: start;
+}
+.pj1{
+    justify-content: left;
+    align-items: start;
+}
+
+/* bo pages */
+/* media queries */
+@media only screen and (max-width: 770px) { /* Adjust as per your requirements */
+    .simg {
+      display: none; /* Hide the second column (image) */
+    }
+  }
+/* media queries */

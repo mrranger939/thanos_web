@@ -1,0 +1,185 @@
+<%- include("partials/header") -%>
+
+<body style="background: linear-gradient(to bottom, 
+#000000, /* Black */
+#040275 , /* Dark green */
+#017c07 , 
+#727003
+); /* Dark blue */
+
+color: white;">
+  <%- include("partials/navbar") -%>
+  <div class="container-fluid ">
+    <div class="row">
+      <div class="col-md-11 col-12 mx-auto">
+
+          
+          <div class="er">
+            
+            <p>
+              A group of intrepid scientists embarked on a groundbreaking journey through space, fueled by an insatiable curiosity to explore the unknown. Venturing into the depths of the cosmos, they uncovered marvels beyond imagination, unraveling the mysteries of distant galaxies and celestial phenomena. However, their odyssey took an unexpected turn when they encountered Thanos, a formidable being of immense power. In a fateful meeting, the scientists struck a perilous deal with Thanos: he would wield his unparalleled ability to erase populations from existence, but only as dictated by the scientists' selection. Seizing upon this pact, the scientists devised a revolutionary solution: they created a website, a digital ledger where individuals could be registered for erasure upon Thanos' arrival on Earth. With this tool, they aimed to confront the ethical quandaries of choosing who should perish and who should endure, grappling with the weight of such tremendous responsibility. As the countdown to Thanos' arrival loomed closer, the website became a battleground of moral dilemmas and ethical debates, reflecting the complexities of humanity's darkest impulses and noblest aspirations. In a world teetering on the brink of oblivion, the scientists stood at the precipice of history, confronting the ultimate question of who deserves to survive in the face of cosmic upheaval. so the group of scientist joined their hands with our engineers to make this website donot lose your chance, you can make anyone disappear. the fate of this world is your hand so choose wisely. the people you register in this website are to be marked as to be erased so donot lose your chance this is your golden oppurtunity in free tier you will get to erase a single person. 
+            </p>
+          </div>
+          <div class="row er">
+            <div class="col-md-6 col-12" style="height: 300px; width: 300px; text-align: center;">
+              <canvas id="pieChart1" style="max-height: 200px; width: 200px;"></canvas>
+              <h3 >The people Thanos gonna Erase</h3>
+            </div>
+            <div class="col-md-6 col-12" style="height: 300px; width: 300px; text-align: center;">
+              <canvas id="pieChart2" style="max-height: 200px; width: 200px;"></canvas>
+              <h3 >The people using our website</h3>
+            </div>
+          </div> 
+            <div class="eraseform er" style="font-size: 1.5rem;">
+                <form action="/erase", method="POST">
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="inputCity">Name</label>
+                        <input type="text" name="name" class="form-control"  placeholder="Your Name" autocomplete="off" required>
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="inputEmail4">Email</label>
+                        <input type="email" name="email" class="form-control"  placeholder="Email" autocomplete="off" required>
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" name="password" class="form-control"  placeholder="Password" required>
+                      </div>
+                      
+                      </div>
+                      <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="inputCity">Person Name</label>
+                        <input type="text" name="person_name" autocomplete="off" placeholder="Person Name" class="form-control"  required>
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="inputEmail4">Person Email</label>
+                        <input type="email" autocomplete="off" name="person_email" class="form-control"  placeholder="Email" required>
+                      </div>
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="inputAddress">Address</label>
+                      <input type="text" autocomplete="off" name="person_address" class="form-control"  placeholder="Person's Address" required>
+                    </div>
+
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="inputCity">City</label>
+                        <input type="text" autocomplete="off" name="person_city" class="form-control"  placeholder="Person's City" required>
+                      </div>
+                      <!-- <div class="form-group col-md-4">
+                        <label for="inputState">State</label>
+                        <select id="inputState" class="form-control">
+                          <option selected>Choose...</option>
+                          <option>...</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-md-2">
+                        <label for="inputZip">Zip</label>
+                        <input type="text" class="form-control" id="inputZip">
+                      </div> -->
+                    </div>
+<!--                     <div class="form-group">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <label class="form-check-label" for="gridCheck">
+                            Check me out
+                        </label>
+                      </div>
+                    </div> -->
+                    <button type="submit" class="btn btn-primary">Register Him/Her</button>
+                  </div></form>
+            
+            <div class="checkerase">
+              <div class="row">
+                <div class="col-md-6 col-12" style="padding-left: 0; color: black; margin-bottom: 2rem;">
+                  <h2>Check Your Erased Person</h2>
+                  <form  action="/erased", method="POST">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1" style="color: white;">Email address</label>
+                      <input type="email" autocomplete="off" name="check_email" class="form-control"  aria-describedby="emailHelp" placeholder="Enter email" required>
+                    </div>
+                    <div class="form-group ">
+                      <label for="exampleInputPassword1" style="color: white;">Password</label>
+                      <input type="password" name="check_password" class="form-control"  placeholder="Password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+                </div>
+                <div class="col-md-6 col-12" style="padding-left: 0; color: black;">
+                  <div class="card">
+                    <div class="card-header">
+                      <%= name %>
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title"><%= person_name %></h5>
+                      <h5 class="card-title"><%= person_email %></h5>
+                      <p class="card-text"><%=person_address %></p>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+        </div>
+        </div>
+        </div>
+      </div>
+  <%- include("partials/footer") -%>
+ 
+
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    // Data for the first pie chart
+    var data1 = {
+      labels: ["People Gonna Be Erased", "People Gonna Live"],
+      datasets: [{
+        data: [50, 50],
+        backgroundColor: ["#ff6384", "#36a2eb"]
+      }]
+    };
+
+    // Get the context of the canvas element for the first pie chart
+    var ctx1 = document.getElementById("pieChart1").getContext('2d');
+
+    // Create the first pie chart
+    var myPieChart1 = new Chart(ctx1, {
+      type: 'pie',
+      data: data1,
+      options: {
+        animation: {
+          animateRotate: true,
+          animateScale: true
+        }
+      }
+    });
+
+    // Data for the second pie chart
+   var valueFromEJS = <%= documentCount %>;
+    var data2 = {
+      labels: ["People alredy using this website", "people who didn't used"],
+      datasets: [{
+        data: [1209062289 + valueFromEJS, 8045311447-1609062289- valueFromEJS],
+        backgroundColor: ["#f20202", "#eafa3e"]
+      }]
+    };
+
+    // Get the context of the canvas element for the second pie chart
+    var ctx2 = document.getElementById("pieChart2").getContext('2d');
+
+    // Create the second pie chart
+    var myPieChart2 = new Chart(ctx2, {
+      type: 'pie',
+      data: data2,
+      options: {
+        animation: {
+          animateRotate: true,
+          animateScale: true
+        }
+      }
+    });
+  </script>
+</body>
