@@ -1,4 +1,7 @@
 {
+  "engines": {
+    "node": "21.5.0"
+  },
   "name": "thanos_p",
   "version": "1.0.0",
   "description": "",
