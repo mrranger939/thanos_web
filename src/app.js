@@ -5,8 +5,8 @@ const path = require("path")
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const _ = require("lodash");
-const publicStaticPath = path.join(__dirname, "/public")
-const temp_path = path.join(__dirname, "/views")
+const publicStaticPath = path.join(__dirname, "../public")
+const temp_path = path.join(__dirname, "../views")
 /* const partials_path = path.join(__dirname, "../templates/partials") */
 const app = express();
 /* connecting database */
