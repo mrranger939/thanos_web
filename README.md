@@ -32,6 +32,6 @@ To get a local copy up and running, follow these simple steps.
 1. **Clone the repo and install NPM packages and run:**
    ```sh
    git clone https://github.com/mrranger939/thanos_web.git
-   cd src
    npm install
+   cd src
    node app.js
